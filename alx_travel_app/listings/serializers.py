@@ -11,7 +11,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
 
     class Meta:
-        model = Review
+        model   = Review
         fields = ['id', 'user', 'rating', 'comment', 'created_at']
 
 class ListingSerializer(serializers.ModelSerializer):
