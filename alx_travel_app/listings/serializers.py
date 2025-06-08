@@ -3,11 +3,17 @@ from .models import Listing, Booking, Review
 from django.contrib.auth.models import User
 
 class UserSerializer(serializers.ModelSerializer):
+    """
+    This is comment
+    """
     class Meta:
         model = User
         fields = ['id', 'username', 'email', 'first_name', 'last_name']
 
 class ReviewSerializer(serializers.ModelSerializer):
+    """
+    This is comment
+    """
     user = UserSerializer(read_only=True)
 
     class Meta:
@@ -15,6 +21,10 @@ class ReviewSerializer(serializers.ModelSerializer):
         fields = ['id', 'user', 'rating', 'comment', 'created_at']
 
 class ListingSerializer(serializers.ModelSerializer):
+    """
+    Serializer for Listing hosts model
+
+    """
     host = UserSerializer(read_only=True)
     reviews = ReviewSerializer(many=True, read_only=True)
     average_rating = serializers.SerializerMethodField()
@@ -35,6 +45,10 @@ class ListingSerializer(serializers.ModelSerializer):
         return sum(review.rating for review in reviews) / len(reviews)
 
 class BookingSerializer(serializers.ModelSerializer):
+
+    """
+    Serializer for booking 
+    """
     guest = UserSerializer(read_only=True)
     listing = ListingSerializer(read_only=True)
     listing_id = serializers.PrimaryKeyRelatedField(
