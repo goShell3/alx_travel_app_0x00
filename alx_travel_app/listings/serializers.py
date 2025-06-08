@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 
 class UserSerializer(serializers.ModelSerializer):
     """
-    This is comment
+    Serializer for Listing hosts model
+
     """
     class Meta:
         model = User
@@ -12,7 +13,8 @@ class UserSerializer(serializers.ModelSerializer):
 
 class ReviewSerializer(serializers.ModelSerializer):
     """
-    This is comment
+    Serializer for Listing hosts model
+
     """
     user = UserSerializer(read_only=True)
 
