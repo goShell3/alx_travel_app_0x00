@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ALX Travel App
 
 A Django-based travel application that helps users discover and book travel experiences. This project is part of the ALX Software Engineering Program.
@@ -199,3 +200,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For support, email support@alxtravelapp.com or create an issue in the repository. 
+=======
+# alx_travel_app_0x00
+>>>>>>> cc38bd0d621101645837a9b626bfaac778b2ee12
